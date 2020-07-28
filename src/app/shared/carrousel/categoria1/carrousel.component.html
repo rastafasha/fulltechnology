@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let categoria of categorias1 | keys | paginate: { id: 'pagination1', itemsPerPage: count, currentPage: p}">
+            <div class="col-12 col-sm-6 col-md-3 ">
+                <div class="productosmov">
+                    <a data-toggle="modal" [attr.data-target]="'#' + categoria.popup">
+                        <img src="{{categoria.image}}" class="img-responsive" alt="fulltechonologyvenezuela {{categoria.title}}">
+                    </a>
+                    <h4>{{categoria.technology}}</h4>
+                    <div class="clear"></div>
+                    <p>{{categoria.category_name}}</p>
+                    <a data-toggle="modal" [attr.data-target]="'#' + categoria.popup" class="btn btn-primary hidden-xs">Ver Articulo</a>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div><br><br>
+        <!--Including the pagination control.-->
+        <div class="row ">
+            <div class="text-center">
+                <pagination-controls id="pagination1" (pageChange)="p = $event" responsive="true" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/*Author: Malcolm Córdova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+@import url('anim.css');
+@import url('animate.min.css');
+@import url('bootstrap.min.css');
+@import url('ionicons.min.css');
+@import url('styles.css');
+@import url('tabs.css');
+@import url('fonts.css');
+@import url('../owl-carousel/owl.carousel.css');
+@import url('../owl-carousel/owl.theme.css');
+@import url('../assets/js/google-code-prettify/prettify.css');
+@import url('carousel.css');
+@import url('FulltechnologyStyle.css');
+@import url('menusegundario.css');
+@import url('preloader.css');

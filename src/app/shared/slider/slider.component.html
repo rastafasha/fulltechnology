@@ -1,0 +1,48 @@
+<section class="bg-primary" id="premium">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-md-push-2">
+                <h1 class="text-center">Productos Premium</h1>
+                <h3 class="text-center">Selección de Calidad</h3><br>
+                <p class="text-center">Productos seleccionado especialmente para usted</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="ppremium ">
+        <div id="carouseldest" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--ol class="carousel-indicators">
+                <li data-target="#carouseldest" data-slide-to="0"></li>
+                <li data-target="#carouseldest" data-slide-to="1"></li>
+            </ol-->
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item  {{ i == 0 ? 'active' : '' }} m-t-0" *ngFor="let destacado of destacados;let i =index;">
+                    <div class="container ppremium" [ngStyle]="{'background-image': 'url(' + destacado.background + ')'}">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 producto">
+                                <img src="{{destacado.image}}" class="bleft" alt="full technology venezuela {{destacado.title}}">
+                            </div>
+                            <div class="col-xs-6 col-sm-6 info">
+                                <h1>{{destacado.title}}</h1>
+                                <h4>{{destacado.technology}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouseldest" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouseldest" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+
+
+</section>

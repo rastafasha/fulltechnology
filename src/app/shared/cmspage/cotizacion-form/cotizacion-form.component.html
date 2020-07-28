@@ -1,0 +1,74 @@
+<section class="reservacion contact cmspage" id="cotizacion">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6  ">
+                <h2 class="margin-top-0 wow fadeIn text-center">¿Donde encontrarnos?</h2> <br>
+                <!--p>C.C Macaracuay Plaza, Torre B, Oficina 6B/ Av. Mara con San José, Macaracuay. <br>Master: <a href="tel:02122575011" target="_blank">0212-2575011</a></p-->
+                <p>C.C Plaza Las Américas II, PB, Kiosco K8/ Final Bulevar Raúl Leoni, <br> El Cafetal, Caracas <br>Teléfono: <a href="tel:02129873320" target="_blank">0212-9873320</a> </p>
+                <p>C.C Plaza Las Américas II, Nivel Bulevar, Local BD-76 <br> Final Bulevar Raúl Leoni, <br> El Cafetal, Caracas <br>Teléfono: <a href="tel:02129853971" target="_blank">0212-9853971</a> </p>
+                <p>Torre Empresarial Ofigarel I, Piso 6. Oficina 6A. Sabana Grande, Caracas. <br> Teléfono: <a href="tel:02127616795" target="_blank">0212-7616795</a></p>
+                <ul class="list-inline">
+                    <li><a rel="nofollow" href="https://www.facebook.com/fulltechnologyvenezuela/" title="facebook" target="_blank"><i class="fa  fa-facebook-official"></i></a></li>
+                    <li><a rel="nofollow" href="https://www.instagram.com/fulltechnology.ca/" title="instagram" target="_blank"><i class="fa  fa-instagram"></i></a></li>
+                    <li><a rel="nofollow" href="https://www.twitter.com/@caracasfulltech" title="Twitter" target="_blank"><i class="fa f fa-twitter"></i></a>&nbsp;</li>
+                </ul>
+
+            </div>
+
+            <div class="col-sm-6  text-center" [hidden]="submitted">
+                <h2 class="margin-top-0 wow fadeIn">Solicite una Cotización</h2>
+                <p>Además puede contactarnos por whatsapp.</p>
+                <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+                    <div class="form-group camp col-sm-6">
+                        <input type="text" name="name" id="name" [(ngModel)]="model.name" class="form-control" placeholder="Nombre" required #name="ngModel">
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                            <div *ngIf="name?.errors.required">
+                                El Nombre es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group camp col-sm-6">
+                        <input type="text" name="lastname" id="lastname" [(ngModel)]="model.lastname" class="form-control" placeholder="Apellido" required #lastname="ngModel">
+                        <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" class="error">
+                            <div *ngIf="lastname?.errors.required">
+                                El Apellido es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group camp col-sm-6">
+                        <input type="text" name="email" id="email" [(ngModel)]="model.email" class="form-control" placeholder="E-Mail" required email #email="ngModel">
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                            <div *ngIf="email?.errors.required"> El Email es requerido.</div>
+                            <div *ngIf="email?.errors.email"> Debe introducir un email valido.</div>
+                        </div>
+                    </div>
+                    <div class="form-group camp col-sm-6">
+                        <input type="text" name="phone" id="phone" [(ngModel)]="model.phone" class="form-control" placeholder=" Teléfono">
+                    </div>
+                    <div class="form-group camp2 col-xs-12">
+                        <textarea name="message" id="message" [(ngModel)]="model.message" rows="5" class="form-control" placeholder=" Mensaje" required #message="ngModel"></textarea>
+                        <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+                            <div *ngIf="message?.errors.required">El Mensaje es requerido.</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button [disabled]="!contactForm.form.valid" class="btn botonmodal col-xs-12 col-md-4 col-md-offset-4"> Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="service-error" *ngIf="error">
+                <h3>{{error.errorTitle}}</h3>
+                <h4>{{error.errorDesc}}</h4>
+
+            </div>
+            <div [hidden]="!submitted" class="contact-message">
+                <div *ngIf="model.id" class="contact-success">
+                    <h3 class="success"> Enviado!</h3>
+                    <h4>El Mensaje ha sido enviado satisfactoriamente.</h4>
+                    <br />
+                    <button (click)="refresh()" class="btn btn-info"> ir al home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

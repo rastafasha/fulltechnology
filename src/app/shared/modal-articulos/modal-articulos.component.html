@@ -1,0 +1,30 @@
+<!---Modale--->
+<div *ngFor="let articulo of articulos; let i = index">
+    <div class="modal fade" id="{{articulo.popup}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="clear"></div>
+                <div class="modal-body fr-view">
+                    <div class="col-sm-6">
+                        <img src="{{articulo.image}}" alt="fulltechnology Venezuela Archer-C8 {{articulo.title}}">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>{{articulo.title}}</h3>
+                        <h4>{{articulo.technology}}</h4>
+                        <p [innerHTML]="articulo.description | keepHtml"></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!--div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div-->
+            </div>
+        </div>
+    </div>
+</div>

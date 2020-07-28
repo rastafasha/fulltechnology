@@ -1,0 +1,243 @@
+<!--Slider Principal-->
+<app-slider></app-slider>
+
+<div class="clear"></div><br><br>
+
+<section class="pdestacados " id="destacado">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-md-push-2">
+                <h1 class="text-center">Nuestros Productos Destacados</h1><br>
+                <p class="text-center">Contamos con una gran variedad de artículos y accesorios, de las marcas mas confiables y reconocidas en cuanto a conexión de redes inalambricas. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div id="demo" class="demo-owl">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="owl-wrapper">
+                        <div *ngFor="let articulo of articulos" class="owl-item">
+                            <a data-toggle="modal" [attr.data-target]="'#' + articulo.popup">
+                                <div class="item">
+                                    <img src="{{articulo.image}}" alt="fulltechonologyvenezuela {{articulo.title}}">
+                                    <h5>{{articulo.technology}}</h5>
+                                    <button class="btn btn-primary">+ info</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
+
+<div class="clear"></div> <br>
+
+
+<div class="algunasareas " style="background-color:#f2f2f2; padding-top: 80px;" id="productos">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-push-1  col-md-7 col-md-push-2 col-lg-6 col-lg-push-3">
+                <h1 class="text-center">Todos nuestros Productos</h1>
+                <div class="clear"></div><br><br>
+                <div class="row">
+                    <ul class="nav nav-tabs botoneratabs" role="tablist">
+                        <li role="presentation ">
+                            <a href="#modem" class="botoncomprar botonmd " aria-controls="home" role="tab" data-toggle="tab">
+                                <img src="assets/svg/wifi-router.svg" class="imgsvg" alt=""> <span class="">Modem</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#router" class="botoncomprar botonmd" aria-controls="cursone" role="tab" data-toggle="tab">
+                                <img src="assets/svg/router2.svg" class="imgsvg" alt=""> <span class="">Router</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#cables" class="botoncomprar botonmd" aria-controls="curstwo" role="tab" data-toggle="tab">
+                                <img src="assets/svg/cables.svg" class="imgsvg" alt=""> <span class="">Cables</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#portatil" class="botoncomprar botonmd" aria-controls="curtre" role="tab" data-toggle="tab">
+                                <img src="assets/svg/portatil.svg" class="imgsvg" alt=""> <span class="">Portátil</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#camaras" class="botoncomprar botonmd" aria-controls="curtre" role="tab" data-toggle="tab">
+                                <img src="assets/svg/camara.svg" class="imgsvg" alt=""> <span class="">Cámaras</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#access" class="botoncomprar botonmd" aria-controls="curtre" role="tab" data-toggle="tab">
+                                <img src="assets/svg/access-point.svg" class="imgsvg" alt=""> <span class="">A.Point</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#otros" class="botoncomprar botonmd" aria-controls="curtre" role="tab" data-toggle="tab">
+                                <img src="assets/svg/otros.svg" class="imgsvg" alt=""> <span class="">Otros</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="container-fluid" style="background-color:#f2f2f2">
+    <div class="">
+        <div class="tab-content">
+            <div role="tabpanel " class="tab-pane active  curso fadeInUp wow" id="modem">
+                <app-carrousel></app-carrousel>
+            </div>
+            <div role="tabpanel " class="tab-pane curso " id="router">
+                <app-carrousel2></app-carrousel2>
+            </div>
+            <div role="tabpanel" class="tab-pane curso " id="cables">
+                <app-carrousel3></app-carrousel3>
+            </div>
+            <div role="tabpanel " class="tab-pane curso " id="portatil">
+                <app-carrousel4></app-carrousel4>
+            </div>
+            <div role="tabpanel " class="tab-pane curso " id="camaras">
+                <app-carrousel5></app-carrousel5>
+            </div>
+            <div role="tabpanel " class="tab-pane curso " id="access">
+                <app-carrousel6></app-carrousel6>
+            </div>
+            <div role="tabpanel " class="tab-pane curso " id="otros">
+                <app-carrousel7></app-carrousel7>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="moduloColor quoteSup" style="background-color:#f2f2f2"></div>
+
+<section class="moduloImagen1 fadeInUp wow" id="soluciones">
+    <div class="container">
+        <div class="row soluciones">
+            <div class="col-sm-12 col-md-6">
+                <h1>Servicio Técnico Especializado, </h1>
+                <h3>distribuidos por la Ciudad.</h3> <br><br>
+                <p>Contamos con Oficina y Local Comercial en el <b>C.C. Plaza Las Américas II y Asistencia Telefónica via Whatsapp,</b> donde gustosamente le atenderemos para venta y servicio técnico.</p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="row">
+
+                    <h3>Asistencia Técnica en: </h3>
+                    <div class="clear"></div><br><br>
+                    <div class="col-xs-12 col-sm-4">
+                        <h3>Redes Inalámbricas:</h3><br>
+                        <ul>
+                            <li>Diagnóstico</li>
+                            <li>Instalación</li>
+                            <li>Configuración</li>
+                            <li>Optimización</li>
+                            <li>Equipamiento</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <h3>Sistemas de Seguridad:</h3><br>
+                        <ul>
+                            <li>Instalación</li>
+                            <li>Configuración</li>
+                            <li>Cableado</li>
+                            <li>Hardware</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <h3>Sistemas Operativos:</h3><br>
+                        <ul>
+                            <li>Optimización</li>
+                            <li>Actualización</li>
+                            <li>Respaldo</li>
+                            <li>Mantenimiento</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div><br><br>
+            <div class="sol col-xs-6 col-sm-5 fadeInUp wow">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                <h4>Tienda fisica</h4>
+            </div>
+            <div class="sol col-xs-6 col-sm-5 fadeInUp wow">
+                <i class="fa fa-truck" aria-hidden="true"></i>
+                <h4>Atención a Domicilio</h4>
+            </div>
+            <div class="sol col-xs-6 col-sm-5 fadeInUp wow ">
+                <i class="fa fa-wifi" aria-hidden="true"></i>
+                <h4>Servicio Técnico</h4>
+            </div>
+            <div class="sol col-xs-6 col-sm-5 fadeInUp wow">
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <h4>Ensamblaje y Configuración</h4>
+            </div>
+            <div class="sol col-xs-12 col-sm-5 fadeInUp wow">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <h4>Mantenimiento preventivo y correctivo</h4>
+            </div>
+            <div class="clear"></div>
+            <div class="text-center">
+                <a class="page-scroll btn btn-primary" href="#cotizacion">Solicitar Cotización</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="moduloImagen-nosotros moduloImagen-nosotros fadeInUp wow" id="nosotros">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center fadeInUp wow">Nosotros</h1>
+            <div class="clear"></div>
+            <br><br>
+            <div class="col-xs-12 col-sm-6  fadeInUp wow">
+
+                <p>Es una empresa de soluciones en servicios informáticos fundamentada en el área de las redes y la computación, especializada en ventas y soporte técnico. Nuestra fidelidad con el cliente es un contenido total entre productos, materiales,
+                    servicio, compromiso, integridad y profesionalismo ofreciendo garantía y calidad en un todo. <br><br> Experiencia en el mercado por más de 20 años haciendo un extenso recorrido en diferentes zonas de la Capital, incluidos los municipios
+                    Libertador, Sucre y Baruta, nos hemos establecido bajo diversas estrategias de mercado incluso en ventas online. <br><br> Somos un grupo de profesionales formados en ingeniería de sistemas e informática, computación y telecomunicaciones
+                    con amplio recorrido en el área académica de tecnología.
+                </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 fadeInUp wow">
+                <p>Full Technology ha tenido amplia experiencia como partner en marcas de fuerte renombre tales como D-LINK y HP en conjunto con nuestros aliados corporativos:
+                </p>
+                <h4 class="text-center" style="color: #fff;">SERVICIOS NON STOP, NON STOP SERVICE, AIRNET SOLUTIONS.</h4> <br>
+                <p>Obteniendo satisfactoriamente el otorgamiento de DLINK ACADEMY en el año 2012. <br><br> Actualmente Full Technology abre sus puertas en el Centro Comercial Plaza Las Américas II en el año 2014, expandiéndose con la marca TP-LINK tanto
+                    en ventas como en servicio técnico especializado. <br><br> Somos innovadores y capacitadores integrales de cada una de las soluciones que ofrecemos, buscando constantemente la excelencia de las nuevas tecnologías emergentes logrando
+                    así cada compromiso propuesto y lealtad con cada uno de nuestros clientes.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="clear"></div>
+
+<!----section class="no-padding blog fadeInUp wow">
+    <div class="container">
+        <div class="row">
+            <h3 class="text-center">Full Technology en Instagram</h3> <br>
+            LightWidget WIDGET
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+            <iframe src="//lightwidget.com/widgets/800d4ce10e195c798719b58dbc258a75.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+        </div>
+    </div>
+</section-->
+<!--visitenos - cotizacion-->
+<app-cotizacion-form></app-cotizacion-form>

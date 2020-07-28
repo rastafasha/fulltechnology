@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* CSS Document */
+/*Author: Malcolm cordova @malcolmcordova mercadocreativo@gmail.com www.malcolmcordova.com*/
+
+body{
+	-webkit-animation:body-animacion 1s 1 ease;
+			-moz-animation:body-animacion 1s 1 ease;
+			-o-animation:body-animacion 1s 1 ease;
+			-ms-animation:body-animacion 1s 1 ease;
+			animation:body-animacion 1s 1 ease;
+
+}
+
+@-ms-keyframes body-animacion {
+	0%   {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-o-keyframes body-animacion {
+	0%   {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-moz-keyframes body-animacion {
+	0%   {opacity:0;}
+	100% {opacity:1;}
+}
+
+@-webkit-keyframes body-animacion {
+	0%   {opacity:0;}
+	100% {opacity:1;}
+}
+
+
+
+.bleft{
+	-webkit-animation:bleft-animacion 2s 1 ;
+			-moz-animation:bleft-animacion 2s 1 ;
+			-o-animation:bleft-animacion 2s 1 ;
+			-ms-animation:bleft-animacion 2s 1 ;
+			animation:bleft-animacion 2s 1 ;
+			-webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+	
+	
+}
+.bright{
+	-webkit-animation:bright-animacion 2s 1 ;
+			-moz-animation:bright-animacion 2s 1 ;
+			-o-animation:bright-animacion 2s 1 ;
+			-ms-animation:bright-animacion 2s 1 ;
+			animation:bright-animacion 2s 1 ;
+			-webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;  
+	
+	
+}
+
+
+.Up {
+    -webkit-animation:Up-animacion 1s 1 ;
+			-moz-animation:Up-animacion 1s 1 ;
+			-o-animation:Up-animacion 1s 1 ;
+			-ms-animation:Up-animacion 1s 1 ;
+			animation:Up-animacion 1s 1 ;
+			-webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;  
+}
+
